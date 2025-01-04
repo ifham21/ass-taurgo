@@ -19,31 +19,12 @@ const MultiStepForm = () => {
     'Client Details',
     'Company address',
     'Fit to work',
-    'Onboarding Complete',
+    'Onboarding Form Complete',
   ];
 
   return (
     <div>
       {/* Progress Bar */}
-      {/* <div className="progress-container">
-        <div className="progress-bar">
-            {steps.map((label, index) => (
-            <div
-                key={index}
-                className={`step ${currentStep > index + 1 ? 'completed' : ''}`}
-            >
-                <div className={`circle ${currentStep === index + 1 ? 'active' : ''}`}>
-                {index + 1}
-                </div>
-                <span className="label">{label}</span>
-                {index < steps.length - 1 && (
-                <div className={`line ${currentStep > index + 1 ? 'completed' : ''}`}></div>
-                )}
-            </div>
-            ))}
-        </div>
-      </div> */}
-
       <div className="multi-step-form">
         <ProgressBar currentStep={currentStep} />
       </div>
