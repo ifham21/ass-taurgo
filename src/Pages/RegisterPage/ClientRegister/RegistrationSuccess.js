@@ -1,6 +1,6 @@
 import React from 'react';
 import './RegistrationSuccess.css';
-import image from '../taurgo-logo.png';
+import image from '../../taurgo-logo.png';
 
 const RegistrationSuccess = () => {
   return (

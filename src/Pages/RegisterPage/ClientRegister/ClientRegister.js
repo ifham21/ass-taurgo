@@ -1,7 +1,7 @@
 import React from 'react'
 import "./ClientRegister.css";
-import image from '../taurgo-logo.png';
-import rics from '../rics-logo.png';
+import image from '../../taurgo-logo.png';
+import rics from '../../rics-logo.png';
 
 const ClientRegister = () => {
   return (

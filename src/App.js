@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./Pages/LoginPage";
-import RegisterPage from "./Pages/RegisterPage";
-// import RegistrationForm from "./Pages/RegisterForm";
-import ClientRegister from "./Pages/ClientRegister/ClientRegister";
-import RegistrationSuccess from "./Pages/ClientRegister/RegistrationSuccess";
-import MultiStepForm from "./Pages/ClientRegister/MultiStepForm";
-import ProgressBar from "./Pages/ProgressBar";
+import RegisterPage from "./Pages/RegisterPage/RegisterPage";
+import ClientRegister from "./Pages/RegisterPage/ClientRegister/ClientRegister";
+import RegistrationSuccess from "./Pages/RegisterPage/ClientRegister/RegistrationSuccess";
+import MultiStepForm from "./Pages/RegisterPage/ClientRegister/MultiStepForm";
+import ProgressBar from "./Pages/RegisterPage/ProgressBar";
 import MainApp from "./Pages/Dashboard/MainApp";
-import TaurgoRegistration from "./Pages/ClientRegister/ExpertiseSelection/TaurgoRegistration";
+import TaurgoRegistration from "./Pages/RegisterPage/ClientRegister/ExpertiseSelection/TaurgoRegistration";
 
 function App() {
   return (

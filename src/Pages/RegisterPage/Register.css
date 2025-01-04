@@ -8,14 +8,13 @@
   .register-form {
     flex: 1;
     padding: 10rem;
-    /* margin: 10rem; */
     display: flex;
     height: 80vh;
     flex-direction: column;
     justify-content: center;
     background-color: #fff;
   }
-
+  
   .image-container {
     flex: 2;
     background: url('../../bg-img.jpg') no-repeat center center;
@@ -71,6 +70,7 @@
   
   form label {
     margin: 0.3rem 0 0.1rem;
+    font-weight: bold;
   }
   
   form input {
@@ -90,7 +90,6 @@
   
   /* Footer styling */
   .footer {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 0.2rem;
@@ -108,6 +107,3 @@
     font-weight: bold;
   }
   
-  .lastLine{
-    align-self: center;
-  }

@@ -6,9 +6,7 @@ const RegisterPage = () => {
   return (
     <div className="register-container">
       <ClientRegister />
-      <div className="image-container">
-        {/* <img src="." alt="Background" /> */}
-      </div>
+      <div className="image-container"></div>
     </div>
   );
 };

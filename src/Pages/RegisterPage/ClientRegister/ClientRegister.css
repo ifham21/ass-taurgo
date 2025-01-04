@@ -18,7 +18,7 @@
 
   .image-container {
     flex: 2;
-    background: url('../../bg-img.jpg') no-repeat center center;
+    background: url('../../../bg-img.jpg') no-repeat center center;
     height: 126vh;
     background-size: cover;
   }
