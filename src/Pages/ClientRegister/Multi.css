@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .multi-step-form {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .step-selection {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+  }
+  
+  .form-content {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #005d4b;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #003c33;
+  }
+  

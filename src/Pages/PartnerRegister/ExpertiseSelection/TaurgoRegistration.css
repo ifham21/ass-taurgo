@@ -1,0 +1,32 @@
+.registration-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: #f9fafb;
+    border-radius: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .headerContent {
+    text-align: center;
+    border: 1px solid #007b7f;
+    color: #307977;
+    border-radius: 100px;
+    background-color: #3079771f;
+  }
+  
+  .headerContent p {
+    font-size: 14px;
+    color: #307977;
+    font-weight: 500;
+    padding: 0;
+    margin: 8px;
+  }
+
+  .contents{
+    color: #6e7071;
+    font-size: 14px;
+  }
+  
+
+  
