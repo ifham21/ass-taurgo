@@ -30,29 +30,6 @@ body {
     margin-bottom: 20px;
   }
   
-  .form-row {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 15px;
-  }
-  
-  .form-group {
-    flex: 1;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
   .form-navigation {
     display: flex;
     justify-content: space-between;
@@ -70,4 +47,54 @@ body {
   button:hover {
     background-color: #003c33;
   }
+
+  .form-navigation.first-step {
+    justify-content: flex-end;
+  }
+  
+  .form-navigation.default-step {
+    justify-content: space-between;
+  }
+  
+  button.right {
+    margin-left: auto;
+  }
+  
+
+  /* General Navigation Styles */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* First Step: Align "Next" button to the right */
+.form-navigation.first-step {
+  justify-content: flex-end;
+}
+
+/* Last Step: Align "Finish" button to the right */
+.form-navigation.last-step {
+  justify-content: flex-end;
+}
+
+/* Default Behavior: Buttons spaced equally */
+.form-navigation.default-step {
+  justify-content: space-between;
+}
+
+/* Right-aligned button for the first step */
+button.right {
+  margin-left: auto;
+}
+
+/* Style for the Finish button */
+button.finish {
+  background-color: #005d4b;
+  color: #fff;
+}
+
+button.finish:hover {
+  background-color: #003c33;
+}
+
   
