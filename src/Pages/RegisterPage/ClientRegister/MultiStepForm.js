@@ -5,6 +5,7 @@ import ExpertiseSelection from "./ExpertiseSelection/ExpertiseSelection";
 import OrganisationDetails from "./OrganisationDetails/OrganisationDetails";
 import CompanyAddress from "./CompanyAddress/CompanyAddress";
 import CompanyInformation from "./CompanyInformation/CompanyInformation";
+import OnboardingForm from "./OnboardingForm/OnboardingForm";
 
 const MultiStepForm = () => {
   const [currentStep, setStep] = useState(2);
@@ -44,6 +45,9 @@ const MultiStepForm = () => {
 
         {/* Step Content 4 */}
         {currentStep === 4 && <CompanyInformation />}
+
+        {/* Step Content 5 */}
+        {currentStep === 5 && <OnboardingForm />}
 
         {/* Navigation Buttons */}
         <div className="form-navigation">
