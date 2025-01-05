@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import './Multi.css';
-import ProgressBar from '../ProgressBar-Component/ProgressBar';
-import ExpertiseSelection from './ExpertiseSelection/ExpertiseSelection';
-import OrganisationDetails from './OrganisationDetails/OrganisationDetails';
-import CompanyAddress from './CompanyAddress/CompanyAddress';
+import React, { useState } from "react";
+import "./Multi.css";
+import ProgressBar from "../ProgressBar-Component/ProgressBar";
+import ExpertiseSelection from "./ExpertiseSelection/ExpertiseSelection";
+import OrganisationDetails from "./OrganisationDetails/OrganisationDetails";
+import CompanyAddress from "./CompanyAddress/CompanyAddress";
+import CompanyInformation from "./CompanyInformation/CompanyInformation";
 
 const MultiStepForm = () => {
   const [currentStep, setStep] = useState(2);
@@ -17,11 +18,11 @@ const MultiStepForm = () => {
   };
 
   const steps = [
-    'Select your expertise',
-    'Personal Details',
-    'Current address',
-    'Fit to work',
-    'Onboarding Form Complete',
+    "Select your expertise",
+    "Personal Details",
+    "Current address",
+    "Fit to work",
+    "Onboarding Form Complete",
   ];
 
   return (
@@ -30,22 +31,19 @@ const MultiStepForm = () => {
       <div className="multi-step-form">
         <ProgressBar currentStep={currentStep} />
       </div>
-      
+
       <div className="step-selection">
         {/* Step Content 1 */}
-        {currentStep == 1 && (
-          <ExpertiseSelection />
-        )}
+        {currentStep == 1 && <ExpertiseSelection />}
 
         {/* Step Content 2 */}
-        {currentStep === 2 && (
-          <OrganisationDetails />
-        )}
+        {currentStep === 2 && <OrganisationDetails />}
 
         {/* Step Content 3 */}
-        {currentStep === 3 && (
-          <CompanyAddress />
-        )}
+        {currentStep === 3 && <CompanyAddress />}
+
+        {/* Step Content 4 */}
+        {currentStep === 4 && <CompanyInformation />}
 
         {/* Navigation Buttons */}
         <div className="form-navigation">
@@ -53,7 +51,6 @@ const MultiStepForm = () => {
           {currentStep < 5 && <button onClick={nextStep}>Next</button>}
         </div>
       </div>
-      
     </div>
   );
 };

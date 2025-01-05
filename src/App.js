@@ -5,7 +5,7 @@ import ClientRegister from "./Pages/RegisterPage/ClientRegister/ClientRegister";
 import RegistrationSuccess from "./Pages/RegisterPage/ClientRegister/RegistrationSuccess/RegistrationSuccess";
 import MultiStepForm from "./Pages/RegisterPage/ClientRegister/MultiStepForm";
 import ProgressBar from "./Pages/RegisterPage/ProgressBar-Component/ProgressBar";
-import MainApp from "./Pages/Dashboard/MainApp";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -18,7 +18,8 @@ function App() {
         <Route path="/client-success" element={<RegistrationSuccess />} />
         <Route path="/client-multi" element={<MultiStepForm />} />
         <Route path="/prog" element={<ProgressBar />} />
-        <Route path="/dash" element={<MainApp />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+
 
 
       </Routes>
