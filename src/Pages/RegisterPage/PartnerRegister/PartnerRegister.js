@@ -1,6 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const PartnerRegister = () => {
+
+  const navigate = useNavigate();
+
+  const handleNext = () => {
+      navigate('/client-multi');
+  };
+
   return (
     <form>
         <label htmlFor="org-reference">Full Name</label>
@@ -23,7 +31,7 @@ const PartnerRegister = () => {
           id="repeat-password"
           placeholder="Repeat your password"
         />
-        <button type="submit" className="btn btn-register">
+        <button type="submit" className="btn btn-register" onClick={handleNext}>
           Register
         </button>
     </form>

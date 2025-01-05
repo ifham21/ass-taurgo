@@ -1,67 +1,66 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .multi-step-form {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 20px;
-  }
+  font-family: Arial, sans-serif;
+}
 
-  .step-selection {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .label {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
-    white-space: nowrap;
-  }
-  
-  .form-content {
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .form-navigation {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #005d4b;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  button:hover {
-    background-color: #003c33;
-  }
+.multi-step-form {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
 
-  .form-navigation.first-step {
-    justify-content: flex-end;
-  }
-  
-  .form-navigation.default-step {
-    justify-content: space-between;
-  }
-  
-  button.right {
-    margin-left: auto;
-  }
-  
+.step-selection {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  /* General Navigation Styles */
+.label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.form-content {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #005d4b;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #003c33;
+}
+
+.form-navigation.first-step {
+  justify-content: flex-end;
+}
+
+.form-navigation.default-step {
+  justify-content: space-between;
+}
+
+button.right {
+  margin-left: auto;
+}
+
+/* General Navigation Styles */
 .form-navigation {
   display: flex;
   justify-content: space-between;
@@ -96,5 +95,3 @@ button.finish {
 button.finish:hover {
   background-color: #003c33;
 }
-
-  
