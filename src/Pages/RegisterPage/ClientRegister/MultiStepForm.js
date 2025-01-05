@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Multi.css';
-import ProgressBar from '../ProgressBar';
+import ProgressBar from '../ProgressBar-Component/ProgressBar';
 import ExpertiseSelection from './ExpertiseSelection/ExpertiseSelection';
 
 const MultiStepForm = () => {

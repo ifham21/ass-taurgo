@@ -1,14 +1,13 @@
 import React from 'react'
-import "./ClientRegister.css";
 
-const ClientRegister = () => {
+const PartnerRegister = () => {
   return (
     <form>
-        <label htmlFor="org-reference">Organisation Reference</label>
+        <label htmlFor="org-reference">Full Name</label>
         <input
           type="text"
           id="org-reference"
-          placeholder="Organisation name"
+          placeholder="Your Name"
         />
         <label htmlFor="email">Email</label>
         <input type="email" id="email" placeholder="Enter your email" />
@@ -31,4 +30,4 @@ const ClientRegister = () => {
   )
 }
 
-export default ClientRegister
+export default PartnerRegister

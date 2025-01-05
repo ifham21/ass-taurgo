@@ -19,11 +19,19 @@ const ProgressBar = ({ currentStep }) => {
 
           return (
             <React.Fragment key={index}>
-              <div className={`step ${isCompleted ? "completed" : ""} ${isActive ? "active" : ""}`}>
+              <div
+                className={`step ${isCompleted ? "completed" : ""} ${
+                  isActive ? "active" : ""
+                }`}
+              >
                 <div className="circle">{index + 1}</div>
                 <span className="label">{label}</span>
               </div>
-              {index < steps.length - 1 && <div className={`separator ${isCompleted ? "completed" : ""}`}></div>}
+              {index < steps.length - 1 && (
+                <div
+                  className={`separator ${isCompleted ? "completed" : ""}`}
+                ></div>
+              )}
             </React.Fragment>
           );
         })}

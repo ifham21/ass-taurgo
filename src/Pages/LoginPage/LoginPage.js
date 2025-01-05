@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-import image from './taurgo-logo.png';
+import image from '../taurgo-logo.png';
 
 const LoginPage = () => {
   const navigate = useNavigate();
