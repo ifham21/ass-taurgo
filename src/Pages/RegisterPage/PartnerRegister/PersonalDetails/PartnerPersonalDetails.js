@@ -77,16 +77,19 @@ const PartnerPersonalDetails = () => {
           </div>
           <div className="form-group">
             <label htmlFor="proofOfIdentity">Proof of Identity *</label>
-            <input
-              type="file"
-              id="proofOfIdentity"
-              accept="image/*"
-              required
-            />
-            <small>
-              Please provide a clear picture of an official ID, such as a
-              Driver's License or Passport.
-            </small>
+            <div className="upload-box">
+              <input
+                type="file"
+                id="proofOfIdentity"
+                accept="image/*"
+                required
+              />
+              <p style={{fontSize: "12px"}}>
+                Upload an official ID, such as a
+                Driver's License or Passport.
+              </p>
+            </div>
+
           </div>
         </div>
       </form>
