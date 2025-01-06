@@ -6,7 +6,7 @@ const PartnerRegister = () => {
   const navigate = useNavigate();
 
   const handleNext = () => {
-      navigate('/client-multi');
+      navigate('/partner-multi');
   };
 
   return (

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import "./Multi.css";
-import ProgressBar from "./ProgressBar-Component/ProgressBar";
-import ExpertiseSelection from "./ExpertiseSelection/ExpertiseSelection";
-import OrganisationDetails from "./OrganisationDetails/OrganisationDetails";
-import CompanyAddress from "./CompanyAddress/CompanyAddress";
-import CompanyInformation from "./CompanyInformation/CompanyInformation";
-import OnboardingForm from "./OnboardingForm/OnboardingForm";
+import "../ClientRegister/Multi.css";
+import PartnerExpertiseSelection from "./ExpertiseSelection/PartnerExpertiseSelection";
+import PartnerOrganisationDetails from "./OrganisationDetails/PartnerOrganisationDetails";
+import PartnerCompanyInformation from "./CompanyInformation/PartnerCompanyInformation";
+import PartnerOnboardingForm from "./OnboardingForm/PartnerOnboardingForm";
+import PartnerCompanyAddress from "./CompanyAddress/PartnerCompanyAddress";
+import PartnerProgressBar from "./PartnerProgressBar/PartnerProgressBar";
 
-const MultiStepForm = () => {
+const PartnerMultiStepForm = () => {
   const [currentStep, setStep] = useState(1);
 
   const nextStep = () => {
@@ -27,16 +27,16 @@ const MultiStepForm = () => {
     <div>
       {/* Progress Bar */}
       <div className="multi-step-form">
-        <ProgressBar currentStep={currentStep} />
+        <PartnerProgressBar currentStep={currentStep} />
       </div>
 
       <div className="step-selection">
         {/* Step Content */}
-        {currentStep === 1 && <ExpertiseSelection />}
-        {currentStep === 2 && <OrganisationDetails />}
-        {currentStep === 3 && <CompanyAddress />}
-        {currentStep === 4 && <CompanyInformation />}
-        {currentStep === 5 && <OnboardingForm />}
+        {currentStep === 1 && <PartnerExpertiseSelection />}
+        {currentStep === 2 && <PartnerOrganisationDetails />}
+        {currentStep === 3 && <PartnerCompanyAddress />}
+        {currentStep === 4 && <PartnerCompanyInformation />}
+        {currentStep === 5 && <PartnerOnboardingForm />}
 
         {/* Navigation Buttons */}
         <div
@@ -63,4 +63,4 @@ const MultiStepForm = () => {
   );
 };
 
-export default MultiStepForm;
+export default PartnerMultiStepForm;
