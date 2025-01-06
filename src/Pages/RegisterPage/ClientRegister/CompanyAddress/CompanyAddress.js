@@ -44,20 +44,16 @@ const CompanyAddress = () => {
             <select id="country">
               <option value="">Country</option>
               <option value="UK">United Kingdom</option>
+              <option value="SL">Sri Lanka</option>
               <option value="US">United States</option>
-              <option value="CA">Canada</option>
-              {/* Add more options as needed */}
             </select>
           </div>
         </div>
 
         <div className="form-group upload-logo">
           <label htmlFor="logo-upload">
-            Upload company logo here <span className="tooltip"></span>
+            Upload company logo here
           </label>
-          <span className="tooltip-text">
-            This will be used to brand all our projects with.
-          </span>
           <div className="upload-box">
             <input type="file" id="logo-upload" accept=".png" />
             <p>Upload logo in (.png) format</p>

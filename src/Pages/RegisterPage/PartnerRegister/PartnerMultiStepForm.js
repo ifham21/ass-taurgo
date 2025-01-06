@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "../ClientRegister/Multi.css";
 import PartnerExpertiseSelection from "./ExpertiseSelection/PartnerExpertiseSelection";
-import PartnerOrganisationDetails from "./OrganisationDetails/PartnerOrganisationDetails";
 import PartnerCompanyInformation from "./CompanyInformation/PartnerCompanyInformation";
 import PartnerOnboardingForm from "./OnboardingForm/PartnerOnboardingForm";
-import PartnerCompanyAddress from "./CompanyAddress/PartnerCompanyAddress";
 import PartnerProgressBar from "./PartnerProgressBar/PartnerProgressBar";
+import PartnerPersonalDetails from "./PersonalDetails/PartnerPersonalDetails";
+import PartnerCurrentAddress from "./CurrentAddress/PartnerCurrentAddress";
 
 const PartnerMultiStepForm = () => {
   const [currentStep, setStep] = useState(1);
@@ -33,8 +33,8 @@ const PartnerMultiStepForm = () => {
       <div className="step-selection">
         {/* Step Content */}
         {currentStep === 1 && <PartnerExpertiseSelection />}
-        {currentStep === 2 && <PartnerOrganisationDetails />}
-        {currentStep === 3 && <PartnerCompanyAddress />}
+        {currentStep === 2 && <PartnerPersonalDetails />}
+        {currentStep === 3 && <PartnerCurrentAddress />}
         {currentStep === 4 && <PartnerCompanyInformation />}
         {currentStep === 5 && <PartnerOnboardingForm />}
 

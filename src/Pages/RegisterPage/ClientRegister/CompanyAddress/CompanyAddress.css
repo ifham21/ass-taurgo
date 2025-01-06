@@ -76,23 +76,3 @@ select {
   margin: 0;
 }
 
-.tooltip {
-  cursor: pointer;
-  color: #888;
-}
-
-.tooltip-text {
-  display: none;
-  position: absolute;
-  background: #f9f9f9;
-  padding: 5px;
-  font-size: 0.8rem;
-  color: #555;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-top: 5px;
-}
-
-.tooltip:hover + .tooltip-text {
-  display: block;
-}

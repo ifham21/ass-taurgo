@@ -1,19 +1,27 @@
 import React from "react";
-import "./CompanyAddress.css";
-import { FaSearch } from 'react-icons/fa';
+import "./CurrentAddress.css";
+import { FaSearch } from "react-icons/fa";
 
-const PartnerCompanyAddress = () => {
+const PartnerCurrentAddress = () => {
   return (
-    <div className="company-address">
-      <h2>Company address</h2>
+    <div className="current-address">
+      <h2>Current Address</h2>
+      <p>
+        We are required to collect a five-year address history. Please start with
+        your current address.
+      </p>
       <form>
         <div className="form-row">
           <div className="form-group">
             <label htmlFor="postcode">Postcode</label>
             <div className="search-box">
-              <input type="text" id="postcode" placeholder="Search postcode"  style={{ borderRadius: '4px 0 0 4px' }} />
+              <input
+                type="text"
+                id="postcode"
+                placeholder="Search postcode"
+              />
               <button type="button" className="search-btn">
-                <FaSearch size={10}/>
+                <FaSearch size={14} />
               </button>
             </div>
           </div>
@@ -42,25 +50,33 @@ const PartnerCompanyAddress = () => {
           <div className="form-group">
             <label htmlFor="country">Country</label>
             <select id="country">
-              <option value="">Country</option>
+              <option value="">Select Country</option>
               <option value="UK">United Kingdom</option>
+              <option value="SL">Sri Lanka</option>
               <option value="US">United States</option>
-              <option value="CA">Canada</option>
-              {/* Add more options as needed */}
             </select>
           </div>
         </div>
 
-        <div className="form-group upload-logo">
-          <label htmlFor="logo-upload">
-            Upload company logo here <span className="tooltip"></span>
-          </label>
-          <span className="tooltip-text">
-            This will be used to brand all our projects with.
-          </span>
-          <div className="upload-box">
-            <input type="file" id="logo-upload" accept=".png" />
-            <p>Upload logo in (.png) format</p>
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="date-moved-in">Date Moved In</label>
+            <input
+              type="date"
+              id="date-moved-in"
+              placeholder="dd-mm-yyyy"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="proof-of-address">Proof of Address</label>
+            <div className="upload-box">
+              <input
+                type="file"
+                id="proof-of-address"
+                accept=".png, .jpg, .jpeg, .pdf"
+              />
+              <p>Upload proof of Address</p>
+            </div>
           </div>
         </div>
       </form>
@@ -68,4 +84,4 @@ const PartnerCompanyAddress = () => {
   );
 };
 
-export default PartnerCompanyAddress;
+export default PartnerCurrentAddress;
