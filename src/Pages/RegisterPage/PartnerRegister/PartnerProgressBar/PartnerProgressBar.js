@@ -5,7 +5,7 @@ const steps = [
   "Select your expertise",
   "Personal Details",
   "Current address",
-  "Fit to work",
+  "Professional Details",
   "Onboarding Form Complete",
 ];
 

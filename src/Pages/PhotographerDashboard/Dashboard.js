@@ -24,7 +24,6 @@ import Diary from "./Diary";
 import Payment from "./Payment";
 import Settings from "./Settings";
 
-
 const Dashboard = () => {
   const sidebarWidth = 240;
   const [activeComponent, setActiveComponent] = useState("AvailableProjects");
