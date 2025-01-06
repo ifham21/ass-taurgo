@@ -1,18 +1,14 @@
 import React, { useState } from "react";
-import "./Dashboard.css";
-import AvailableProjects from "./AvailableProjects";
-import MyProjects from "./MyProjects";
-import Diary from "./Diary";
-import Payment from "./Payment";
-import Settings from "./Settings";
-import { FaHome } from "react-icons/fa";
-import { FaFolderOpen } from "react-icons/fa";
-import { FaBookOpen } from "react-icons/fa";
-import { FaCreditCard } from "react-icons/fa";
-import { FaCog } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
+import "./AdminDashboard.css";
+import AvailableProjects from "../PhotographerDashboard/AvailableProjects";
+import MyProjects from "../PhotographerDashboard/MyProjects";
+import Diary from "../PhotographerDashboard/Diary";
+import Payment from "../PhotographerDashboard/Payment";
+import Settings from "../PhotographerDashboard/Settings";
+import { FaHome, FaFolderOpen, FaBookOpen, FaCreditCard, FaCog, FaUser } from "react-icons/fa";
 
-const Dashboard = () => {
+
+const AdminDashboard = () => {
   const [activeComponent, setActiveComponent] = useState("AvailableProjects");
 
   // Function to render the active component
@@ -121,4 +117,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default AdminDashboard;

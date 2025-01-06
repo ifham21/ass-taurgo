@@ -64,42 +64,41 @@ export default function MyProjects() {
 
   return (
     <Box sx={{ p: 3, backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
-      {/* Header */}
-      <AppBar position="static" color="default" elevation={0}>
-        <Toolbar
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <Typography variant="h6" color="inherit" sx={{ fontWeight: "bold" }}>
+      {/* Header Box */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          mb: 3,
+          p: 2,
+        }}
+      >
+        {/* Title and Subtitle */}
+        <Box>
+          <Typography variant="h6" gutterBottom>
             My Projects
           </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: 2,
-              backgroundColor: "#fff",
-              borderRadius: "5px",
-              px: 2,
-              py: 1,
-              boxShadow: "0px 1px 4px rgba(0, 0, 0, 0.1)",
-            }}
-          >
-            <SearchIcon />
-            <InputBase
-              placeholder="Search"
-              value={searchTerm}
-              onChange={handleSearchChange}
-              sx={{ flex: 1 }}
-            />
-          </Box>
-          <Button variant="contained" color="success">
-            Download CSV
-          </Button>
-        </Toolbar>
-      </AppBar>
+          <Typography variant="body2" color="textSecondary">
+            View property available
+          </Typography>
+        </Box>
+
+        {/* Search Bar */}
+        <InputBase
+          placeholder="Search"
+          sx={{
+            px: 2,
+            py: 1,
+            border: "1px solid #ccc",
+            borderRadius: 1,
+            width: "250px",
+          }}
+        />
+        <Button variant="contained" color="success">
+          Download CSV
+        </Button>
+      </Box>
 
       {/* Table */}
       <TableContainer component={Paper} sx={{ mt: 3, borderRadius: 2 }}>

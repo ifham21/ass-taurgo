@@ -8,6 +8,7 @@ import ProgressBar from "./Pages/RegisterPage/ClientRegister/ProgressBar-Compone
 import Dashboard from "./Pages/PhotographerDashboard/Dashboard";
 import SpringTest from "./Pages/SpringTest/SpringTest";
 import PartnerMultiStepForm from "./Pages/RegisterPage/PartnerRegister/PartnerMultiStepForm";
+import AdminDashboard from "./Pages/AdminDashboard/AdminDashboard";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Route path="/prog" element={<ProgressBar />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/springTest" element={<SpringTest />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+
 
 
       </Routes>
