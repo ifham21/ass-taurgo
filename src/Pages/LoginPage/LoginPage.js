@@ -1,13 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import image from '../taurgo-logo.png';
+import axios from 'axios';
 
 const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleRegisterNavigation = () => {
     navigate("/register");
+  };
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    
+    // Check if the input is for admin
+    if (email === "admin@email.com" && password === "admin") {
+      navigate("/Admin");
+      return;
+    }
+
+    // Regular login functionality
+    axios.post("http://localhost:3001/login", { email, password })
+      .then(result => {
+        if (result.data === "Success") {
+          navigate("/dashboard");
+        } else {
+          alert("Login failed: User does not exist, please register!");
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   return (
@@ -18,11 +43,28 @@ const LoginPage = () => {
         </div>
         <h1>Log in</h1>
         <p className="welcome">Welcome back!</p>
-        <form>
+
+        <form onSubmit={handleLogin}>
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" placeholder="Enter your email" />
+          <input 
+            name="email" 
+            type="email" 
+            id="email" 
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            placeholder="Enter your email" 
+          />
+
           <label htmlFor="password">Password</label>
-          <input type="password" id="password" placeholder="Enter your password" />
+          <input
+            name="password"
+            type="password" 
+            id="password" 
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            placeholder="Enter your password" 
+          />
+
           <div className="options">
             <label>
               <input type="checkbox" />
@@ -32,6 +74,7 @@ const LoginPage = () => {
           </div>
           <button type="submit" className="btn">Sign in</button>
         </form>
+
         <p className="lastLine">
           Don’t have an account?{" "}
           <span onClick={handleRegisterNavigation} className="register-link">
