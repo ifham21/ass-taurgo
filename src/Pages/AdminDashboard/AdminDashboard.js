@@ -1,23 +1,27 @@
 import React, { useState } from "react";
 import "./AdminDashboard.css";
-import AvailableProjects from "../PhotographerDashboard/AvailableProjects";
-import MyProjects from "../PhotographerDashboard/MyProjects";
-import Diary from "../PhotographerDashboard/Diary";
-import Payment from "../PhotographerDashboard/Payment";
-import Settings from "../PhotographerDashboard/Settings";
+import DashboardComponent from "./DashboardComponent";
+import AllProperty from "./AllProperty";
+import Permission from "./Permission";
+import Diary from "./Diary";
+import Payment from "./Payment";
+import Settings from "./Settings";
 import { FaHome, FaFolderOpen, FaBookOpen, FaCreditCard, FaCog, FaUser } from "react-icons/fa";
 
 
+
 const AdminDashboard = () => {
-  const [activeComponent, setActiveComponent] = useState("AvailableProjects");
+  const [activeComponent, setActiveComponent] = useState("Dashboard");
 
   // Function to render the active component
   const renderComponent = () => {
     switch (activeComponent) {
-      case "AvailableProjects":
-        return <AvailableProjects />;
-      case "MyProjects":
-        return <MyProjects />;
+      case "Dashboard":
+        return <DashboardComponent />;
+      case "All Property":
+        return <AllProperty />;
+      case "Permission":
+        return <Permission />;
       case "Diary":
         return <Diary />;
       case "Payment":
@@ -35,28 +39,46 @@ const AdminDashboard = () => {
       <div className="sidebar">
         <div className="sidebar-header">Unite Compliance</div>
         <ul className="menu-list">
+          {/* Dashboard */}
           <li
             className={`menu-item ${
-              activeComponent === "AvailableProjects" ? "active" : ""
+              activeComponent === "Dashboard" ? "active" : ""
             }`}
-            onClick={() => setActiveComponent("AvailableProjects")}
+            onClick={() => setActiveComponent("Dashboard")}
           >
             <span className="menu-icon">
               <FaHome />
             </span>
-            <span>Available Projects</span>
+            <span>Dashboard</span>
           </li>
+
+          {/* All Property */}
           <li
             className={`menu-item ${
-              activeComponent === "MyProjects" ? "active" : ""
+              activeComponent === "AllProperty" ? "active" : ""
             }`}
-            onClick={() => setActiveComponent("MyProjects")}
+            onClick={() => setActiveComponent("All Property")}
           >
             <span className="menu-icon">
               <FaFolderOpen />
             </span>
-            <span>My Projects</span>
+            <span>All Property</span>
           </li>
+
+          {/* Permission */}
+          <li
+            className={`menu-item ${
+              activeComponent === "Permission" ? "active" : ""
+            }`}
+            onClick={() => setActiveComponent("Permission")}
+          >
+            <span className="menu-icon">
+              <FaBookOpen />
+            </span>
+            <span>Permission</span>
+          </li>
+
+          {/* Diary */}
           <li
             className={`menu-item ${
               activeComponent === "Diary" ? "active" : ""
@@ -68,6 +90,8 @@ const AdminDashboard = () => {
             </span>
             <span>Diary</span>
           </li>
+
+          {/* Payment */}
           <li
             className={`menu-item ${
               activeComponent === "Payment" ? "active" : ""
@@ -79,6 +103,8 @@ const AdminDashboard = () => {
             </span>
             <span>Payment</span>
           </li>
+          
+          {/* Settings */}
           <li
             className={`menu-item ${
               activeComponent === "Settings" ? "active" : ""
@@ -102,8 +128,8 @@ const AdminDashboard = () => {
           <div className="right-section">
             <div className="user-profile">
               <div>
-                <h4 className="name-title">Pathum Bandara</h4>
-                <p className="name-subtitle">Photographer</p>
+                <h4 className="name-title">Ahmed Ifham</h4>
+                <p className="name-subtitle">Admin</p>
               </div>
               <div className="user-avatar">
                 <FaUser size={32} />
