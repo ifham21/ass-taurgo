@@ -14,10 +14,15 @@ const PartnerRegister = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [repeatPassword, setRepeatPassword] = useState("");
 
   const handleSignup = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3001/signup", {name, email, password})
+    if (password !== repeatPassword) {
+      window.alert("Passwords do not match!");
+      return;
+    }
+    axios.post("http://localhost:8080/api/auth/register", { name, email, password })
     .then(result => {
       if(result.status == 201){
         console.log("User Created Successfully");

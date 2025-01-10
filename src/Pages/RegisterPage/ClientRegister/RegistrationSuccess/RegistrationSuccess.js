@@ -1,8 +1,17 @@
 import React from "react";
 import "./RegistrationSuccess.css";
+import { useNavigate } from 'react-router-dom';
 import image from "../../../taurgo-logo.png";
+import { FaCheck } from 'react-icons/fa';
 
 const RegistrationSuccess = () => {
+
+    const navigate = useNavigate();
+
+    const handleFinish = () => {
+      navigate('/login');
+  };
+
   return (
     <div className="registration-success">
       <div className="logo-container">
@@ -16,11 +25,11 @@ const RegistrationSuccess = () => {
 
       <div className="checkmark-container">
         <div className="checkmark">
-          <i className="bi bi-check-lg"></i>
+          <FaCheck  />
         </div>
       </div>
 
-      <button className="ok-button">OK</button>
+      <button className="ok-button" onClick={handleFinish}>OK</button>
     </div>
   );
 };

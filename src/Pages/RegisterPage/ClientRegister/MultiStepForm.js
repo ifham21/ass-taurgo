@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Multi.css";
+import { useNavigate } from 'react-router-dom';
 import ProgressBar from "./ProgressBar-Component/ProgressBar";
 import ExpertiseSelection from "./ExpertiseSelection/ExpertiseSelection";
 import OrganisationDetails from "./OrganisationDetails/OrganisationDetails";
@@ -10,6 +11,8 @@ import OnboardingForm from "./OnboardingForm/OnboardingForm";
 const MultiStepForm = () => {
   const [currentStep, setStep] = useState(1);
 
+  const navigate = useNavigate();
+
   const nextStep = () => {
     if (currentStep < 5) setStep(currentStep + 1);
   };
@@ -17,6 +20,7 @@ const MultiStepForm = () => {
   const prevStep = () => {
     if (currentStep === 5) {
       console.log("Finish clicked");
+      navigate("/client-success"); 
       // Add finish logic here
     } else if (currentStep > 1) {
       setStep(currentStep - 1);

@@ -24,7 +24,7 @@ const LoginPage = () => {
     }
 
     // Regular login functionality
-    axios.post("http://localhost:3001/login", { email, password })
+    axios.post("http://localhost:8080/api/auth/login", { email, password })
       .then(result => {
         if (result.data === "Success") {
           navigate("/dashboard");

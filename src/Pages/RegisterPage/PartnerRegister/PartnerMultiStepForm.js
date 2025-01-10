@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "../ClientRegister/Multi.css";
 import PartnerExpertiseSelection from "./ExpertiseSelection/PartnerExpertiseSelection";
 import PartnerOnboardingForm from "./OnboardingForm/PartnerOnboardingForm";
@@ -10,6 +11,8 @@ import PartnerProfessionalDetails from "./ProfessionalDetails/PartnerProfessiona
 const PartnerMultiStepForm = () => {
   const [currentStep, setStep] = useState(1);
 
+  const navigate = useNavigate();
+
   const nextStep = () => {
     if (currentStep < 5) setStep(currentStep + 1);
   };
@@ -17,6 +20,7 @@ const PartnerMultiStepForm = () => {
   const prevStep = () => {
     if (currentStep === 5) {
       console.log("Finish clicked");
+      navigate("/client-success"); 
       // Add finish logic here
     } else if (currentStep > 1) {
       setStep(currentStep - 1);
