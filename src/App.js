@@ -9,6 +9,7 @@ import Dashboard from "./Pages/PhotographerDashboard/Dashboard";
 import SpringTest from "./Pages/SpringTest/SpringTest";
 import PartnerMultiStepForm from "./Pages/RegisterPage/PartnerRegister/PartnerMultiStepForm";
 import AdminDashboard from "./Pages/AdminDashboard/AdminDashboard";
+import ClientDiary from "./Pages/PhotographerDashboard/Diary/ClientDiary";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/springTest" element={<SpringTest />} />
         <Route path="/admin" element={<AdminDashboard />} />
+
+
+        <Route path="/smile" element={<ClientDiary />} />
 
 
 

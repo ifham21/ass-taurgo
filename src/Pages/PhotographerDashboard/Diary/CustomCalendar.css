@@ -1,0 +1,114 @@
+/* Container */
+.cc-calendar-container {
+    width: 320px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .cc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cc-nav-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #1976d2;
+  }
+  
+  .cc-month-year {
+    text-align: center;
+    flex: 1;
+  }
+  
+  /* Controls */
+  .cc-controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cc-date-input {
+    flex: 1;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .cc-today-button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .cc-today-button:hover {
+    background-color: #1565c0;
+  }
+  
+  /* Week Days */
+  .cc-week-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #f9f9f9;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  /* Calendar Days */
+  .cc-calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+  }
+  
+  .cc-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .cc-day:hover {
+    background-color: #e0f7fa;
+  }
+  
+  .cc-disabled {
+    color: #ccc;
+    pointer-events: none;
+  }
+  
+  .cc-today {
+    background-color: #b3e5fc;
+    border: 2px solid #0288d1;
+  }
+  
+  .cc-selected {
+    background-color: #1976d2;
+    color: white;
+  }
+  

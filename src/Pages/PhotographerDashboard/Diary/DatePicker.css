@@ -1,0 +1,47 @@
+.custom-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+  }
+  
+ /* Toolbar styling */
+.custom-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Center align the Month and Year */
+  .month-year-display {
+    flex: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Today button styling */
+  .today-button {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .today-button-style {
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1976d2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .today-button-style:hover {
+    background-color: #1565c0;
+  }
+  
