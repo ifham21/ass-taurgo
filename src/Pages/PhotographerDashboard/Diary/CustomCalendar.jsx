@@ -1,5 +1,16 @@
 import React, { useState } from "react";
-import { format, addMonths, subMonths, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isToday } from "date-fns";
+import {
+  format,
+  addMonths,
+  subMonths,
+  startOfMonth,
+  endOfMonth,
+  startOfWeek,
+  endOfWeek,
+  addDays,
+  isSameMonth,
+  isToday,
+} from "date-fns";
 import "./CustomCalendar.css";
 
 const CustomCalendar = () => {
@@ -23,11 +34,24 @@ const CustomCalendar = () => {
     }
 
     return days.map((day, index) => (
+      //   <div
+      //     key={index}
+      //     className={`cc-day ${!isSameMonth(day, currentMonth) ? "cc-disabled" : ""} ${
+      //       isToday(day) ? "cc-today" : ""
+      //     } ${selectedDate.toDateString() === day.toDateString() ? "cc-selected" : ""}`}
+      //     onClick={() => isSameMonth(day, currentMonth) && setSelectedDate(day)}
+      //   >
+      //     {day.getDate()}
+      //   </div>
       <div
         key={index}
-        className={`cc-day ${!isSameMonth(day, currentMonth) ? "cc-disabled" : ""} ${
-          isToday(day) ? "cc-today" : ""
-        } ${selectedDate.toDateString() === day.toDateString() ? "cc-selected" : ""}`}
+        className={`cc-day ${
+          !isSameMonth(day, currentMonth) ? "cc-disabled" : ""
+        } ${isToday(day) ? "cc-today" : ""} ${
+          selectedDate.toDateString() === day.toDateString()
+            ? "cc-selected"
+            : ""
+        }`}
         onClick={() => isSameMonth(day, currentMonth) && setSelectedDate(day)}
       >
         {day.getDate()}
