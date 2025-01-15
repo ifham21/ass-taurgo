@@ -34,15 +34,6 @@ const CustomCalendar = () => {
     }
 
     return days.map((day, index) => (
-      //   <div
-      //     key={index}
-      //     className={`cc-day ${!isSameMonth(day, currentMonth) ? "cc-disabled" : ""} ${
-      //       isToday(day) ? "cc-today" : ""
-      //     } ${selectedDate.toDateString() === day.toDateString() ? "cc-selected" : ""}`}
-      //     onClick={() => isSameMonth(day, currentMonth) && setSelectedDate(day)}
-      //   >
-      //     {day.getDate()}
-      //   </div>
       <div
         key={index}
         className={`cc-day ${

@@ -4,10 +4,12 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
 import ClientCalender from "./ClientCalender";
+import { MonthView } from "./MonthView";
 
 
 function ClientDiary() {
 
+  const [viewMode, setViewMode] = useState("Week");
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -43,15 +45,44 @@ function ClientDiary() {
               <Button variant="text">&gt;</Button>
             </Box>
             <Box>
-              <Button variant="text">Day</Button>
-              <Button variant="text" sx={{ fontWeight: "bold" }}>
+              <Button
+                variant="text"
+                onClick={() => setViewMode("Day")}
+                sx={{ fontWeight: viewMode === "Day" ? "bold" : "normal" }}
+              >
+                Day
+              </Button>
+              <Button
+                variant="text"
+                onClick={() => setViewMode("Week")}
+                sx={{ fontWeight: viewMode === "Week" ? "bold" : "normal" }}
+              >
                 Week
               </Button>
-              <Button variant="text">Month</Button>
-              <Button variant="text">Year</Button>
+              <Button
+                variant="text"
+                onClick={() => setViewMode("Month")}
+                sx={{ fontWeight: viewMode === "Month" ? "bold" : "normal" }}
+              >
+                Month
+              </Button>
+              <Button
+                variant="text"
+                onClick={() => setViewMode("Year")}
+                sx={{ fontWeight: viewMode === "Year" ? "bold" : "normal" }}
+              >
+                Year
+              </Button>
             </Box>
           </Box>
 
+          {/* Right Panel Content */}
+          {viewMode === "Month" && <MonthView />}
+          {viewMode !== "Month" && (
+            <Box sx={{ textAlign: "center", padding: 2 }}>
+              <Typography variant="h6">Content for {viewMode} View</Typography>
+            </Box>
+          )}
         </Paper>
       </Box>
     </LocalizationProvider>

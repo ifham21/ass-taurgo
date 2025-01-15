@@ -62,17 +62,16 @@
 }
 
 .cc-today-button:hover {
-    background-color: #086a0d; /* Darker green for hover */
+    background-color: #035C59; 
 }
 
 /* Week Days */
 .cc-week-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    /* background-color: #f9f9f9; */
-    padding: 5px 0;
+    padding: 10px;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -95,7 +94,7 @@
 }
 
 .cc-day:hover {
-    background-color: #04ab12; /* Light green on hover */
+    background-color: #047b77; /* Light green on hover */
 }
 
 .cc-disabled {
@@ -103,12 +102,13 @@
     pointer-events: none;
 }
 
-.cc-today {
+/* .cc-today {
     background-color: #c8e6c9; 
-    border: 2px solid #076f0c; 
-}
+    border: 2px solid #035C59; 
+} */
 
 .cc-selected {
-    background-color: #388e3c; 
+    background-color: #035C59; 
+    border: 2px solid #035C59;
     color: white;
 }

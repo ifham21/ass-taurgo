@@ -3,7 +3,7 @@ import { Box, Typography, Paper, Divider } from "@mui/material";
 import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
 import dayjs from "dayjs";
 import DatePickerUI from "./DatePickerUi";
-import CustomCalendar from "./CustomCalendar";
+// import CustomCalendar from "./CustomCalendar";
 
 const ClientCalendar = () => {
   const [selectedDate, setSelectedDate] = useState(dayjs());
@@ -13,6 +13,7 @@ const ClientCalendar = () => {
     // { time: "10:30 - 11:00 AM", title: "Photo capture", location: "78 Court Street Tonypandy, CF 2RL, GB" },
     // { time: "12:30 - 1:00 PM", title: "Photo capture", location: "78 Court Street Tonypandy, CF 2RL, GB" },
   ];
+  
 
   return (
     <Paper
@@ -25,8 +26,8 @@ const ClientCalendar = () => {
       }}
     >
       {/* Date Picker Section */}
-      {/* <DatePickerUI /> */}
-      <CustomCalendar/>
+      <DatePickerUI />
+      {/* <CustomCalendar/> */}
 
       {/* Selected Date Display */}
       <Typography variant="subtitle2" mt={2} gutterBottom>
