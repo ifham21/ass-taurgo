@@ -1,36 +1,55 @@
 import React, { useState } from "react";
-import { IconButton } from "@mui/material";
+import { Box, Typography, Paper, Divider, IconButton } from "@mui/material";
 import { LocalizationProvider, StaticDatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import dayjs from "dayjs";
 import format from "date-fns/format";
 import enLocale from "date-fns/locale/en-US";
 
-const CustomDatePicker = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  const [currentMonth, setCurrentMonth] = useState(new Date());
+const ClientCalendar = () => {
+  const [selectedDate, setSelectedDate] = useState(dayjs());
 
-  const handlePreviousMonth = () => {
-    const newDate = new Date(
-      currentMonth.getFullYear(),
-      currentMonth.getMonth() - 1,
-      1
-    );
-    setCurrentMonth(newDate);
-  };
+    // const [selectedDate, setSelectedDate] = useState(new Date());
+    const [currentMonth, setCurrentMonth] = useState(new Date());
+  
+    const handlePreviousMonth = () => {
+      const newDate = new Date(
+        currentMonth.getFullYear(),
+        currentMonth.getMonth() - 1,
+        1
+      );
+      setCurrentMonth(newDate);
+    };
+  
+    const handleNextMonth = () => {
+      const newDate = new Date(
+        currentMonth.getFullYear(),
+        currentMonth.getMonth() + 1,
+        1
+      );
+      setCurrentMonth(newDate);
+    };
 
-  const handleNextMonth = () => {
-    const newDate = new Date(
-      currentMonth.getFullYear(),
-      currentMonth.getMonth() + 1,
-      1
-    );
-    setCurrentMonth(newDate);
-  };
+  const events = [
+    { time: "8:30 - 9:00 AM", title: "Photo capture", location: "78 Court Street Tonypandy, CF 2RL, GB" },
+  ];
+  
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enLocale}>
+    <Paper
+      sx={{
+        padding: 2,
+        width: "350px",
+        display: "flex",
+        flexDirection: "column",
+        boxShadow: 3,
+      }}
+    >
+      {/* Date Picker Section */}
+      {/* <DatePickerUI /> */}
+      {/* <CustomCalendar/> */}
       <div style={{ maxWidth: "400px", margin: "auto" }}>
         {/* Custom Toolbar */}
         <div
@@ -161,8 +180,32 @@ const CustomDatePicker = () => {
         />
         
       </div>
-    </LocalizationProvider>
+
+      {/* Selected Date Display */}
+      <Typography variant="subtitle2" mt={2} gutterBottom>
+        {`Today ${selectedDate.format("MM/DD/YYYY")}`}:
+      </Typography>
+      
+      <Divider sx={{ marginY: 2 }} />
+
+      {/* Events Section */}
+      <Box sx={{ maxHeight: "200px", overflowY: "auto" }}>
+        {events.map((event, index) => (
+          <Box key={index} sx={{ marginBottom: 2 }}>
+            <Typography variant="body2" sx={{ color: "text.secondary" }}>
+              {event.time}
+            </Typography>
+            <Typography variant="body1" fontWeight="bold" gutterBottom>
+              {event.title}
+            </Typography>
+            <Typography variant="caption" color="text.secondary">
+              {event.location}
+            </Typography>
+          </Box>
+        ))}
+      </Box>
+    </Paper>
   );
 };
 
-export default CustomDatePicker;
+export default ClientCalendar;
