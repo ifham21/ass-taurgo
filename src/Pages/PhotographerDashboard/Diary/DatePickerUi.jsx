@@ -5,7 +5,7 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import format from "date-fns/format";
-import enLocale from "date-fns/locale/en-US";
+// import enLocale from "date-fns/locale/en-US";
 
 const CustomDatePicker = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -30,24 +30,42 @@ const CustomDatePicker = () => {
   };
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enLocale}>
-      <div style={{ maxWidth: "400px", margin: "auto" }}>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <div
+        style={{
+          maxWidth: "310px",
+          margin: "auto",
+          padding: "20px",
+          textAlign: "center",
+          border: "1px solid #035C59",
+          borderRadius: "8px",
+        }}
+      >
         {/* Custom Toolbar */}
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            marginBottom: "16px",
+            marginBottom: "2px",
           }}
         >
           {/* Previous Month Button */}
-          <IconButton onClick={handlePreviousMonth} style={{ color: "#035C59" }}>
+          <IconButton
+            onClick={handlePreviousMonth}
+            style={{ color: "#035C59" }}
+          >
             <NavigateBeforeIcon />
           </IconButton>
 
           {/* Month Picker */}
-          <div style={{ fontWeight: "bold", fontSize: "1.2rem", color: "#035C59" }}>
+          <div
+            style={{
+              fontWeight: "bold",
+              fontSize: "1rem",
+              color: "#035C59",
+            }}
+          >
             {format(currentMonth, "MMMM yyyy")}
           </div>
 
@@ -57,37 +75,31 @@ const CustomDatePicker = () => {
           </IconButton>
         </div>
 
-        {/* Custom Toolbar */}
+        {/* Date Display and Today Button */}
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "start",
-            marginBottom: "16px",
+            marginBottom: "2px",
           }}
         >
-
-        {/* Date Display */}
-        <div
+          {/* Date Display */}
+          <div
             style={{
-              border: "1px solid",
-              padding: "8px 52px",
+              border: "1px solid #035C59",
+              padding: "6px 8px",
               borderRadius: "4px",
-              fontSize: "1.2rem",
+              fontSize: "1rem",
               color: "#035C59",
+              flex: "1",
+              textAlign: "center",
+              marginRight: "4px",
             }}
           >
             {format(selectedDate, "MMM dd, yyyy")}
           </div>
 
-        {/* Today Button */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            marginBottom: "10px",
-          }}
-        >
+          {/* Today Button */}
           <button
             onClick={() => {
               const today = new Date();
@@ -95,54 +107,32 @@ const CustomDatePicker = () => {
               setCurrentMonth(today);
             }}
             style={{
-              backgroundColor: "#FFFFFF",
-              color: "#000000",
-              border: "1px solid",
-              padding: "8px 16px",
+              backgroundColor: "#035C59",
+              color: "#FFFFFF",
+              border: "none",
+              padding: "6px 8px",
               borderRadius: "4px",
-              fontSize: "1.2rem",
+              fontSize: "1rem",
+              cursor: "pointer",
             }}
           >
             Today
           </button>
         </div>
 
-        </div>
-
         {/* Calendar */}
         <StaticDatePicker
           displayStaticWrapperAs="desktop"
-          value={selectedDate}
+          value={currentMonth}
           onChange={(newValue) => setSelectedDate(newValue)}
           showDaysOutsideCurrentMonth
+          fixedWeekNumber={6}
           sx={{
-            // Hide the header containing month and navigation
-        "& .MuiDatePickerToolbar-root": {
-          display: "none",
-        },
-        // Optionally adjust the height if needed after removing the header
-        "& .MuiDatePickerViewTransitionContainer-root": {
-          marginTop: 0,
-        },
-            "& .MuiDayPicker-header": {
-              display: "grid",
-              gridTemplateColumns: "repeat(7, 1fr)",
-              fontWeight: "bold",
-              backgroundColor: "#FFFFFF",
-              color: "#035C59",
+            "& .MuiPickersCalendarHeader-root": {
+              display: "none", // Hide the header
             },
             "& .MuiDayPicker-weekContainer": {
-              gridTemplateColumns: "repeat(7, 1fr)",
-            },
-            "& .MuiPickersDay-dayOutsideMonth": {
-              opacity: 0.5,
-            },
-            "& .MuiPickersDay-root": {
-              height: "40px",
-              width: "40px",
-              margin: "2px",
-              color: "#035C59",
-              borderRadius: "50%",
+              gridTemplateColumns: "repeat(7, 0.5fr)",
             },
             "& .MuiPickersDay-root:hover": {
               backgroundColor: "#035C59",
@@ -159,7 +149,6 @@ const CustomDatePicker = () => {
             },
           }}
         />
-        
       </div>
     </LocalizationProvider>
   );

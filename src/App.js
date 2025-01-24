@@ -11,6 +11,9 @@ import PartnerMultiStepForm from "./Pages/RegisterPage/PartnerRegister/PartnerMu
 import AdminDashboard from "./Pages/AdminDashboard/AdminDashboard";
 import ClientDiary from "./Pages/PhotographerDashboard/Diary/ClientDiary";
 import ClientCalendar from "./Pages/ClientDiary/ClientCalender";
+import { DatePicker } from "@mui/x-date-pickers";
+import CustomDatePicker from "./Pages/PhotographerDashboard/Diary/DatePickerUi";
+import CalendarHeaderComponent from "./Pages/PhotographerDashboard/Diary/CalendarHeaderComponent";
 
 function App() {
   return (
@@ -32,6 +35,12 @@ function App() {
         <Route path="/smile" element={<ClientDiary />} />
 
         <Route path="/td" element={<ClientCalendar />} />
+
+
+        <Route path="/date" element={<CustomDatePicker />} />
+
+        <Route path="/date2" element={<CalendarHeaderComponent />} />
+
 
 
 
